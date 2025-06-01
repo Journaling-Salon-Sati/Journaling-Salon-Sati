@@ -187,7 +187,7 @@ padding-left: 210px;
     margin-left: 10px;
     font-size: 14px;
     line-height: 1.5;
-    color: #43311f;
+    color: #365c3b;
   }
 
   .card-title {
@@ -835,5 +835,8 @@ textarea:focus {
   }
 
 
+  .card-tag {
 
+    color: #365c3b;
+  }
 }
