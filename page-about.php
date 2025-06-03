@@ -9,10 +9,10 @@
         <?php get_header(); ?>
 
         <div id="content" class="site-content">
-            <main id="primary" class="main-content">
+            <main id="primary" class="main-content fade-in">
 
                 <h1 class="komidashi fade-in">About</h1>
-                <p class="fade-in">
+                <p>
                     「ジャーナリングサロン サティ」では、ヴィパッサナー瞑想の修行者・永井陽一朗によるジャーナリング（書く瞑想）講座を開講しています。
                     <br><br>
                     私たちは日々、多くのことを考えています。その中には、無自覚に繰り返している思考や、思考の癖があります。<br>

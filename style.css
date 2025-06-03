@@ -20,10 +20,57 @@ Tags: custom-theme, journaling
 
 html {
   background-color: #fff3e7;
+  
 }
+
 
 @media screen and (min-width: 1080px) {
 
+  .header-visual {
+    position: relative;
+  }
+
+  .header-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+.header-title {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  color: #365c3b;
+  font-size: 48px;
+  font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+}
+
+.header-p {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  color: #365c3b;
+    font-size: 20px;
+  font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+  
+
+  .icon-before-title {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  
 
 .profile {
   font-size: 18px;
@@ -31,7 +78,6 @@ html {
 }
 
 .button {
-  
   display: block; /* ← inline-block や block に変更 */
   width: 280px;
   margin: 40px auto;
@@ -42,28 +88,15 @@ html {
   border: 1px solid #365c3b;
   font-size: 16px;
   border-radius: 6px;
- 
-  
+  transition: color 0.2s ease-in-out;
+  }
+
+  .button:hover {
+    color: #fff;
   }
 
 
-  header,footer,.site-content {
-padding-left: 210px;
-  }
 
-
-
-  .header-visual {
-    
-    width: 100%;
-    height: auto;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
 
   .footer-obi {
     height: auto;
@@ -245,13 +278,6 @@ padding-left: 210px;
     flex-direction: column;
   }
 
-  /* ヘッダー画像 */
-  .header-visual {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
   /* コンテンツ */
   .site-content {
     display: flex;
@@ -262,57 +288,83 @@ padding-left: 210px;
     margin: auto;
   }
 
-  .sidebar-logo {
-    display: flex;
-    justify-content: center;
-
-  }
 
   /* サイドバー */
   .site-sidebar {
-    width: 210px;
-    background-color: #365c3b;
-    color: #43311f;
-    position: fixed;
-    height: 100vh;
-    align-self: start; /* Flexbox 対応用（親が flex の場合） */
+    width: 300px;
+    background-color: rgba(67, 49, 31, 0.1);
+
+    padding: 1.5%;
+  }
+
+  .sidebar-logo {
+    text-align: center;
   }
 
   .logo {
-    width: 180px;
-    height: auto;
-    margin-bottom: 50px;
-    margin-top: 20px;
-  }
+width: 200px;
+height: 200px;
+padding-bottom: 1.5%;
+
+    }
+
+    .sidebar-nav {
+      border-top: solid 1px rgba(67, 49, 31, 0.3);
+border-bottom: solid 1px rgba(67, 49, 31, 0.3);
+/* border-top: solid 1px rgba(255, 243, 231, 0.5); */
+/* border-bottom: solid 1px rgba(255, 243, 231, 0.5); */
+padding-top: 12%;
+padding-bottom: 12%;
+    }
 
   .sidebar-menu {
-    width: 190px;
+    width: 100%;
     margin: auto;
-padding-right: 20px;
-    padding-left: 20px;
   }
 
-  .site-sidebar__inner {
-    height: 100%;
-  }
 
+
+ .menu-p {
+width: 40%;
+height: auto;
+color: #43311f;
+
+font-size: 32px;
+text-align: center;
+margin: auto;
+border-bottom: solid 1px #43311f;
+padding-bottom: 8%;
+margin-bottom: 8%;
+ }
+ 
   .sidebar-menu li {
-    margin-bottom: 24px;
-    font-size: 16px;
-    color: #fff3e7;
+    width: 100%;
+    height: auto;
+    color: #43311f;
+    margin-bottom: 6%;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: color 0.2s ease-in-out;
   }
 
+  .sidebar-menu li:hover {
+    color: #365c3b;
+  }
 
+  .menu-icon {
+    width: 1.6em;
+    height: 1.6em;
+    margin-right: 6%;
+    vertical-align: middle;
+  }
 
   li {
     font-size: 16px;
     line-height: 1.5;
-    color: #43311f;
+    color: #fff3e7;
   }
 
-  .sidebar-divider {
-    border: solid 0.5px #fff;
-  }
+
 
   /* メインコンテンツ */
 
@@ -439,7 +491,11 @@ textarea:focus {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 6px;
-    
+    transition: color 0.2s ease-in-out;
+  }
+
+  form input[type="submit"]:hover {
+    color: #fff;
   }
 
 
@@ -465,6 +521,13 @@ textarea:focus {
 
 @media screen and (max-width: 1080px) {
 
+  .header-title {
+    display: none;
+  }
+
+  .header-p {
+    display: none;
+  }
 
 .profile {
   font-size: 18px;
@@ -472,7 +535,7 @@ textarea:focus {
 }
 
   .button {
-  
+
     display: block; /* ← inline-block や block に変更 */
     width: 280px;
 margin: auto;
@@ -485,6 +548,10 @@ margin: auto;
     font-size: 16px;
     border-radius: 6px;
  
+    }
+
+    .button:hover {
+      color: #fff;
     }
 
   .post-thumb {
@@ -601,6 +668,7 @@ ul li {
     background-color: #365c3b;
     z-index: 1000;
     transition: right 0.4s ease;
+    overflow-y: auto;
   }
 
   .hamburger-menu.active {
@@ -608,18 +676,31 @@ ul li {
   }
 
   .hamburger-menu ul {
-    margin-top: 100px;
-    padding: 0;
+    margin-top: 50px;
+    padding: 4%;
     list-style: none;
     line-height: 1.5;
   }
 
   .hamburger-menu li {
-    margin: 20px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 6%;
+      font-size: 14px;
+      color: #43311f;
+      background-color: #fff3e7;
+      border-radius: 8px;
+      border: solid 1px #fff3e7;
+      padding: 6% 4%;
+      transition: color 0.2s ease-in-out;
+    }
+  
+    .sidebar-menu li:hover {
+      color: #365c3b;
   }
 
   .hamburger-menu li a {
-    color: #fff3e7;
+    color: #43311f;
     text-decoration: none;
     font-size: 18px;
     line-height: 1.5;
@@ -755,6 +836,11 @@ textarea:focus {
     border-radius: 6px;
 }
 
+form input[type="submit"]:hover {
+  color: #fff;
+}
+
+
 
 
   /* フェードイン */
@@ -839,4 +925,20 @@ textarea:focus {
 
     color: #365c3b;
   }
+
+  .icon-before-title {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+
+  .menu-icon {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+  
+  
 }

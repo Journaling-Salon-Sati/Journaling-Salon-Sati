@@ -2,6 +2,17 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <!-- Webフォント -->
+    <!-- Google Fonts（非同期読み込みに変更） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap">
+    </noscript>
     <meta charset="<?php bloginfo('charset'); ?>">
 
     <!-- エンコーディング・レスポンシブ対応 -->
@@ -81,17 +92,7 @@
     <meta name="twitter:image"
         content="<?php echo has_post_thumbnail() ? esc_url(get_the_post_thumbnail_url(null, 'full')) : esc_url(get_template_directory_uri() . '/images/title.jpg'); ?>">
 
-    <!-- Webフォント -->
-    <!-- Google Fonts（非同期読み込みに変更） -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap">
-    </noscript>
+
 
 
     <!-- Favicon / Apple Touch Icon -->
@@ -135,9 +136,6 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="site-header">
-
-
-
         <div class="obi">
             <p class="obi-title"><a href="<?php echo esc_url( home_url('/') ); ?>">Journaling Salon Sati</a></p>
             <div class="hamburger" id="hamburger">
@@ -146,39 +144,79 @@
                 <span></span>
             </div>
         </div>
-        <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-            <picture class="header-visual">
-                <source srcset="<?php echo esc_url(get_template_directory_uri() . '/images/title_sp.webp'); ?>"
-                    media="(max-width: 1080px)" type="image/webp">
-                <source srcset="<?php echo esc_url(get_template_directory_uri() . '/images/title.webp'); ?>"
-                    type="image/webp">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/title.jpg'); ?>"
-                    alt="Journaling Salon Sati">
-            </picture>
+        <?php
+// デフォルト画像
+$top_image_pc = get_template_directory_uri() . '/images/title.jpg';
+$top_image_webp = get_template_directory_uri() . '/images/title.webp';
 
+// 各固定ページごとの切り替え
+if (is_page('yarikata')) {
+    $top_image_pc = get_template_directory_uri() . '/images/yarikata.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/yarikata.webp';
+} elseif (is_page('profile')) {
+    $top_image_pc = get_template_directory_uri() . '/images/profile.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/profile.webp';
+} elseif (is_page('koza')) {
+    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+} elseif (is_page('thanks')) {
+    $top_image_pc = get_template_directory_uri() . '/images/thanks.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/thanks.webp';
+} elseif (is_page('tokutei')) {
+    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+} elseif (is_page('policy')) {
+    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+} elseif (is_page('contact')) {
+    $top_image_pc = get_template_directory_uri() . '/images/contact.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/contact.webp';
+}
+?>
+
+
+        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+            <picture class="header-visual">
+                <?php if ( is_front_page() ) : ?>
+                <p class="header-title">
+                    Journaling Salon Sati
+                </p>
+
+                <p class="header-p">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
+                <?php endif; ?>
+                <source srcset="<?php echo esc_url($top_image_webp); ?>" type="image/webp">
+                <img src="<?php echo esc_url($top_image_pc); ?>" alt="<?php bloginfo('name'); ?>">
+            </picture>
         </a>
+
 
 
         <!-- ハンバーガーメニューが開いたときのメニュー本体 -->
         <nav class="hamburger-menu" id="hamburger-menu">
             <ul>
-                <li><a href="<?php echo esc_url( home_url('/') ); ?>">Home</a></li>
+                <li><a href="<?php echo esc_url( home_url('/') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">Home</a></li>
 
+                <li><a href="<?php echo esc_url( home_url('/yarikata') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">ジャーナリングとは</a></li>
 
-                <li><a href="<?php echo esc_url( home_url('/yarikata') ); ?>">ジャーナリングとは</a></li>
-                <!-- アンカー内にテキストを入れる -->
-                <li><a href="<?php echo esc_url( home_url('/koza') ); ?>">ジャーナリング講座</a></li>
-                <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">講師プロフィール</a></li>
-                <li><a href="<?php echo esc_url( home_url('/category/information/') ); ?>">お知らせ・ブログ</a></li>
-                <!-- 
+                <li><a href="<?php echo esc_url( home_url('/koza') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">ジャーナリング講座</a></li>
 
-                <li>
-                    <a href="https://mosh.jp/193558/home" target="_blank" rel="noopener noreferrer">MOSH</a>
-                </li> -->
+                <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">講師プロフィール</a></li>
 
-                <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問合せ</a></li>
+                <li><a href="<?php echo esc_url( home_url('/category/information/') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">お知らせ・ブログ</a></li>
 
-
+                <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                            alt="icon" class="menu-icon">お問合せ</a></li>
             </ul>
         </nav>
     </header>

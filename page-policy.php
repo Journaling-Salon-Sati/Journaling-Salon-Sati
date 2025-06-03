@@ -12,11 +12,13 @@
         <?php get_header(); ?>
 
         <div id="content" class="site-content">
-            <main id="primary" class="main-content">
+            <main id="primary" class="main-content fade-in">
 
-                <h1 class="komidashi fade-in">プライバシーポリシー</h1>
+                <h1 class="komidashi"><img
+                        src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
+                        class="icon-before-title">プライバシーポリシー</h1>
 
-                <p class="fade-in">
+                <p>
                     「Journaling Salon
                     Sati」では、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。
                     この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は<a class="policy"

@@ -12,11 +12,14 @@
         <?php get_header(); ?>
 
         <div id="content" class="site-content">
-            <main id="primary" class="main-content">
-                <h1 class="komidashi">ジャーナリングとは</h1>
-                <p class=" fade-in">ジャーナリングとは、書く瞑想とも呼ばれ、自分の思考を文字にして可視化することで、自分を客観的に観察する方法のことです。</p>
-                <h2 class="fade-in">ジャーナリングのやり方</h2>
-                <p class=" fade-in">
+            <main id="primary" class="main-content fade-in">
+                <h1 class="komidashi"><img
+                        src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
+                        class="icon-before-title">ジャーナリングとは</h1>
+                <p>ジャーナリングとは、書く瞑想とも呼ばれ、自分の思考を文字にして可視化することで、自分を客観的に観察する方法のことです。</p>
+                <h2><img src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>"
+                        alt="icon" class="icon-before-title">ジャーナリングのやり方</h2>
+                <p>
                     紙とペンを用意します。
                     頭に浮かんできた思考を、ひたすら紙に書いていきます。このとき、ペンを走らせる手を止めないようにするのがポイントです。
                     もし何も浮かばなければ、「何も浮かばない」という意味のことを書きます。
@@ -31,12 +34,13 @@
                     思考を文字化 → 思考を可視化 → 思考を客観的に観察 → 気づきが得られる
                 </p>
                 <br>
-                <p class="fade-in">
+                <p>
                     ジャーナリングにはテーマを決めて行うやり方もあります。例えば、「感謝したいこと」をテーマに決めたら、ジャーナリングで感謝したいことを書き出していきます。衣食住があること、大切な人がいること、仕事が楽しいこと、など感謝したいことを書き出していきます。書き出したら読み返し、観察します。
                 </p>
 
-                <h2 class="fade-in">ジャーナリングの効果</h2>
-                <ul class="fade-in">
+                <h2><img src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>"
+                        alt="icon" class="icon-before-title">ジャーナリングの効果</h2>
+                <ul>
                     <li>
                         ・気づき<br>
                         ジャーナリング（書く瞑想）によって、無意識に行っている思考も紙に書き出されるため、自分では気づいていない思考の癖や思い込み、本音が明らかになります。実際に私のジャーナリング講座を受けた方の中には、「0か100で考える思考の癖」に気づいた方、「バイアスのかかった思考」に気づいた方、そして「子どもの頃から刷り込まれていたネガティブな思い込み」が明らかになった方もいらっしゃいます。また、なんとなく思っていたことや、感じていたことに対する自覚が強まったり、認識が高まることもあります。
@@ -62,7 +66,7 @@
                     </li><br>
 
                 </ul><br>
-                <p class="fade-in">
+                <p>
                     「ジャーナリングサロン サティ」では、ヴィパッサナー瞑想の修行者・永井 陽一朗による自己理解を深めるジャーナリング講座を開講しています。
                 </p>
                 <a class="button" href="<?php echo esc_url( home_url('/koza') ); ?>">ジャーナリング講座</a>

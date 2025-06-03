@@ -9,10 +9,13 @@
         <?php get_header(); ?>
 
         <div id="content" class="site-content">
-            <main id="primary" class="main-content">
+            <main id="primary" class="main-content fade-in">
 
-                <h1 class="komidashi fade-in">書く瞑想で自分の心に光を当てて行く<span class="author-name">――永井陽一朗</span></h1>
-                <p class="fade-in">
+                <h1 class="komidashi">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>"
+                        alt="icon" class="icon-before-title">書く瞑想で自分の心に光を当てて行く<span class="author-name">――永井陽一朗</span>
+                </h1>
+                <p class="">
 
                     私たちは日々、多くのことを考えています。その中には、無自覚に繰り返している思考や、思考の癖があります。<br>
                     自分では気づかないネガティブな思い込みに基づいた思考によって、苦しむこともあるでしょう。<br><br>

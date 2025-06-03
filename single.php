@@ -16,7 +16,9 @@
             <main id="primary" class="main-content">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article class="single-post">
-                    <h1 class="komidashi"><?php the_title(); ?></h1>
+                    <h1 class="komidashi"><img
+                            src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>"
+                            alt="icon" class="icon-before-title"><?php the_title(); ?></h1>
 
                     <div class="post-meta">
                         <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>

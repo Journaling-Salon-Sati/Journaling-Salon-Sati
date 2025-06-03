@@ -14,10 +14,12 @@
     <div class="main-area">
         <?php get_header(); ?>
         <div class="site-content contact-page">
-            <main id=" primary" class="main-content">
-                <h1 class="komidashi fade-in">お問い合わせ</h1>
+            <main id=" primary" class="main-content fade-in">
+                <h1 class="komidashi"><img
+                        src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
+                        class="icon-before-title">お問い合わせ</h1>
 
-                <form class="fade-in" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+                <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
                     <input type="hidden" name="action" value="submit_contact_form">
                     <p>
                         <label for="your_name">お名前</label><br>
