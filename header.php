@@ -178,11 +178,11 @@ if (is_page('yarikata')) {
         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
             <picture class="header-visual">
                 <?php if ( is_front_page() ) : ?>
-                <p class="header-title">
+                <p class="header-title  fade-in">
                     Journaling Salon Sati
                 </p>
 
-                <p class="header-p">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
+                <p class="header-p  fade-in">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
                 <?php endif; ?>
                 <source srcset="<?php echo esc_url($top_image_webp); ?>" type="image/webp">
                 <img src="<?php echo esc_url($top_image_pc); ?>" alt="<?php bloginfo('name'); ?>">

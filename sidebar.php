@@ -16,6 +16,7 @@
                     src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_green.png' ); ?>"
                     alt="<?php bloginfo('name'); ?>">
             </a>
+            <p class="logo-p">Journaling Salon Sati</p>
         </div>
 
         <!-- グローバルナビゲーション -->
