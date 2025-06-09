@@ -9,14 +9,12 @@
 <aside id="secondary" class="site-sidebar">
     <div class="site-sidebar__inner">
 
-
         <div class="sidebar-logo">
             <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
                 <img class="logo"
-                    src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_green.png' ); ?>"
+                    src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_green_text.png' ); ?>"
                     alt="<?php bloginfo('name'); ?>">
             </a>
-            <p class="logo-p">Journaling Salon Sati</p>
         </div>
 
         <!-- グローバルナビゲーション -->

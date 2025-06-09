@@ -13,10 +13,9 @@
 
                 <h1 class="komidashi">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>"
-                        alt="icon" class="icon-before-title">書く瞑想で自分の心に光を当てて行く<span class="author-name">――永井陽一朗</span>
+                        alt="icon" class="icon-before-title">書く瞑想で自分の心に光を当てて行く
                 </h1>
-                <p class="">
-
+                <p>
                     私たちは日々、多くのことを考えています。その中には、無自覚に繰り返している思考や、思考の癖があります。<br>
                     自分では気づかないネガティブな思い込みに基づいた思考によって、苦しむこともあるでしょう。<br><br>
 
@@ -33,6 +32,7 @@
                     <br>
                     「ジャーナリングサロン サティ」では、ヴィパッサナー瞑想の修行者・永井陽一朗が、ジャーナリング（書く瞑想）を通して自己理解を深める講座を提供しています。
                 </p>
+                <p class="author-sign">永井陽一朗</p>
 
                 <a class="button" href="<?php echo esc_url( home_url('/koza') ); ?>">ジャーナリング講座</a>
 
