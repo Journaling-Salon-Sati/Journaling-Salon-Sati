@@ -14,7 +14,7 @@
     <div class="main-area">
         <?php get_header(); ?>
         <div class="site-content contact-page">
-            <main id=" primary" class="main-content fade-in">
+            <main id="primary" class="main-content fade-in">
                 <h1 class="komidashi"><img
                         src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
                         class="icon-before-title">お問い合わせ</h1>
@@ -34,7 +34,7 @@
                         <textarea id="your_message" name="your_message" rows="6" required></textarea>
                     </p>
                     <p>
-                        <input type="submit" mainue="送信">
+                        <input type="submit" value="送信">
                     </p>
                 </form>
             </main>
