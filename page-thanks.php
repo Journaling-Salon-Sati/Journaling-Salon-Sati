@@ -11,7 +11,7 @@
     <div class="main-area">
         <?php get_header(); ?>
         <div class="site-content contact-page">
-            <main id=" primary" class="main-content fade-in">
+            <main id="primary" class="main-content fade-in">
                 <h1 class="komidashi"><img
                         src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
                         class="icon-before-title">お問い合わせいただきありがとうございます。</h1>
