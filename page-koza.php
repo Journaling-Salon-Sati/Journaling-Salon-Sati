@@ -53,7 +53,7 @@
 
 
 
-                    <a class="button" href="https://buy.stripe.com/6oUfZjboF86PemcaixbEA02" target="_blank"
+                    <a class="button" href="https://buy.stripe.com/5kQ7sNfEVevd4LCgGVbEA04" target="_blank"
                         rel="noopener noreferrer">お申し込みはこちらから</a>
 
 
