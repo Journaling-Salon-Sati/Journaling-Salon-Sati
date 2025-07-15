@@ -38,8 +38,22 @@ html {
     display: block;
   }
 
+<<<<<<< HEAD
   .header-visual {
     position: relative;
+=======
+
+.header-title {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  color: #365c3b;
+  font-size: 48px;
+  font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+>>>>>>> f13841c551ec70e982afd480a07b674d70773420
   }
   
   .header-text {

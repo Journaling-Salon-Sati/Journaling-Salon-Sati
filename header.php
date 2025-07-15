@@ -188,12 +188,23 @@ if (is_page('yarikata')) {
 ?>
 
 
+<<<<<<< HEAD
         <picture class="header-visual fade-in">
             <?php if ( is_front_page() ) : ?>
             <div class="header-text fade-in">
                 <p class="header-title">Journaling Salon Sati</p>
                 <p class="header-p">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
             </div>
+=======
+
+        <picture class="header-visual fade-in">
+            <?php if ( is_front_page() ) : ?>
+            <p class="header-title  fade-in">
+                Journaling Salon Sati
+            </p>
+
+            <p class="header-p  fade-in">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
+>>>>>>> f13841c551ec70e982afd480a07b674d70773420
             <?php endif; ?>
             <source srcset="<?php echo esc_url($top_image_webp); ?>" type="image/webp">
             <img src="<?php echo esc_url($top_image_pc); ?>" alt="<?php bloginfo('name'); ?>">
