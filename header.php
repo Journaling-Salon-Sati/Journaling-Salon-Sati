@@ -137,7 +137,14 @@
 
     <header class="site-header">
         <div class="obi">
-            <p class="obi-title"><a href="<?php echo esc_url( home_url('/') ); ?>">Journaling Salon Sati</a></p>
+
+            <p class="obi-title">
+                <a href="<?php echo esc_url( home_url('/') ); ?>">
+
+                    Journaling Salon Sati
+                </a>
+            </p>
+
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -151,73 +158,80 @@ $top_image_webp = get_template_directory_uri() . '/images/title.webp';
 
 // 各固定ページごとの切り替え
 if (is_page('yarikata')) {
-    $top_image_pc = get_template_directory_uri() . '/images/yarikata.jpg';
-    $top_image_webp = get_template_directory_uri() . '/images/yarikata.webp';
+    $top_image_pc = get_template_directory_uri() . '/images/d.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/d.webp';
 } elseif (is_page('profile')) {
     $top_image_pc = get_template_directory_uri() . '/images/profile.jpg';
     $top_image_webp = get_template_directory_uri() . '/images/profile.webp';
 } elseif (is_page('koza')) {
-    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
-    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+    $top_image_pc = get_template_directory_uri() . '/images/koza.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/koza.webp';
 } elseif (is_page('thanks')) {
     $top_image_pc = get_template_directory_uri() . '/images/thanks.jpg';
     $top_image_webp = get_template_directory_uri() . '/images/thanks.webp';
 } elseif (is_page('tokutei')) {
-    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
-    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+    $top_image_pc = get_template_directory_uri() . '/images/g.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/g.webp';
 } elseif (is_page('policy')) {
-    $top_image_pc = get_template_directory_uri() . '/images/title.jpg';
-    $top_image_webp = get_template_directory_uri() . '/images/title.webp';
+    $top_image_pc = get_template_directory_uri() . '/images/a.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/a.webp';
 } elseif (is_page('contact')) {
     $top_image_pc = get_template_directory_uri() . '/images/contact.jpg';
     $top_image_webp = get_template_directory_uri() . '/images/contact.webp';
+}elseif (is_category()) {
+    $top_image_pc = get_template_directory_uri() . '/images/b.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/b.webp';
+}elseif (is_page('chosho')) {
+    $top_image_pc = get_template_directory_uri() . '/images/c.jpg';
+    $top_image_webp = get_template_directory_uri() . '/images/c.webp';
 }
 ?>
 
 
-        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-            <picture class="header-visual">
-                <?php if ( is_front_page() ) : ?>
-                <p class="header-title  fade-in">
-                    Journaling Salon Sati
-                </p>
-
-                <p class="header-p  fade-in">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
-                <?php endif; ?>
-                <source srcset="<?php echo esc_url($top_image_webp); ?>" type="image/webp">
-                <img src="<?php echo esc_url($top_image_pc); ?>" alt="<?php bloginfo('name'); ?>">
-            </picture>
-        </a>
+        <picture class="header-visual fade-in">
+            <?php if ( is_front_page() ) : ?>
+            <div class="header-text fade-in">
+                <p class="header-title">Journaling Salon Sati</p>
+                <p class="header-p">ヴィパッサナー瞑想の修行者によるジャーナリング講座</p>
+            </div>
+            <?php endif; ?>
+            <source srcset="<?php echo esc_url($top_image_webp); ?>" type="image/webp">
+            <img src="<?php echo esc_url($top_image_pc); ?>" alt="<?php bloginfo('name'); ?>">
+        </picture>
 
 
 
         <!-- ハンバーガーメニューが開いたときのメニュー本体 -->
         <nav class="hamburger-menu" id="hamburger-menu">
+
+
+            <p class="menu-p-sp">Menu</p>
             <ul>
                 <li><a href="<?php echo esc_url( home_url('/') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">Home</a></li>
 
                 <li><a href="<?php echo esc_url( home_url('/yarikata') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">ジャーナリングとは</a></li>
 
                 <li><a href="<?php echo esc_url( home_url('/koza') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">ジャーナリング講座</a></li>
 
                 <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">講師プロフィール</a></li>
 
                 <li><a href="<?php echo esc_url( home_url('/category/information/') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">お知らせ・ブログ</a></li>
 
                 <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon.png' ); ?>"
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">お問合せ</a></li>
             </ul>
+
         </nav>
     </header>
     <?php sati_breadcrumb(); ?>

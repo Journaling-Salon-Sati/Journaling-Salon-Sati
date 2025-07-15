@@ -11,12 +11,6 @@ Text Domain: journaling-salon-sati
 Tags: custom-theme, journaling
 */
 
-.author-name {
-  white-space: nowrap;
-  color: #365c3b;
-  font-weight: bold;
-  font-size: 24px;
-}
 
 html {
   background-color: #fff3e7;
@@ -26,12 +20,14 @@ html {
 
 @media screen and (min-width: 1080px) {
 
-  .logo-p {
-    font-size:24px;
-    color:#365c3b;
-
+  .author-sign {
+    text-align: right;
+    margin-top: 2em;
+    font-size: 15px;
+    color: #43311f;
+    font-family: "Noto Serif", serif;
   }
-
+  
   .header-visual {
     position: relative;
   }
@@ -42,31 +38,34 @@ html {
     display: block;
   }
 
-
-.header-title {
-  position: absolute;
-  top: 5%;
-  left: 3%;
-  color: #365c3b;
-  font-size: 48px;
-  font-family: "Noto Serif", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+  .header-visual {
+    position: relative;
   }
+  
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 
-
-
-.header-p {
-  position: absolute;
-  top: 20%;
-  left: 3%;
-  color: #365c3b;
-    font-size: 20px;
+  }
+  
+.header-title{
+  color: #fff; /* 文字色は背景に合わせて */
+  font-size: 56px;
   font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
+.header-p {
+  color: #fff; /* 文字色は背景に合わせて */
+  font-size: 32px;
+  font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
   
 
@@ -274,7 +273,7 @@ html {
   }
   .site-wrapper {
     display: flex;
-    min-height: 100vh;
+ 
   }
 
   /* 右カラム：ヘッダー＋コンテンツ＋フッター */
@@ -282,6 +281,7 @@ html {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-left: 300px; 
   }
 
   /* コンテンツ */
@@ -292,35 +292,47 @@ html {
     flex-grow: 1;
     width: 800px;
     margin: auto;
+ 
   }
+
 
 
   /* サイドバー */
   .site-sidebar {
     width: 300px;
     background-color: rgba(67, 49, 31, 0.1);
-
     padding: 1.5%;
+    position: fixed;
+    top: 0;               /* 画面上端に合わせる */
+    left: 0;              /* 画面左端に合わせる */
+    height: 100vh;        /* 高さを画面いっぱいに */
+    overflow-y: auto;   
+    z-index: 100;    
   }
 
   .sidebar-logo {
     text-align: center;
+    margin-bottom: 56px;
   }
 
   .logo {
-width: 200px;
-height: 200px;
-padding-bottom: 1.5%;
+width: 240px;
+height: 240px;
 
     }
 
+  
+    
+
     .sidebar-nav {
-      border-top: solid 1px rgba(67, 49, 31, 0.3);
+border-top: solid 1px rgba(67, 49, 31, 0.3);
 border-bottom: solid 1px rgba(67, 49, 31, 0.3);
 /* border-top: solid 1px rgba(255, 243, 231, 0.5); */
 /* border-bottom: solid 1px rgba(255, 243, 231, 0.5); */
 padding-top: 12%;
 padding-bottom: 12%;
+
+;
     }
 
   .sidebar-menu {
@@ -334,11 +346,14 @@ padding-bottom: 12%;
 width: 40%;
 height: auto;
 color: #43311f;
-
+font-family: "Noto Serif JP", serif;
+font-optical-sizing: auto;
+font-weight: normal;
+font-style: normal;
 font-size: 32px;
 text-align: center;
 margin: auto;
-border-bottom: solid 1px #43311f;
+border-bottom: solid 1px #365c3b;
 padding-bottom: 8%;
 margin-bottom: 8%;
  }
@@ -353,9 +368,17 @@ margin-bottom: 8%;
     transition: color 0.2s ease-in-out;
   }
 
+
   .sidebar-menu li:hover {
     color: #365c3b;
   }
+
+.line {
+  margin-left: 4%;
+  margin-right: 4%;
+  border-top: solid 1px rgba(67, 49, 31, 0.3);
+border-bottom: solid 1px rgba(67, 49, 31, 0.3);
+}
 
   .menu-icon {
     width: 1.6em;
@@ -363,6 +386,7 @@ margin-bottom: 8%;
     margin-right: 6%;
     vertical-align: middle;
   }
+
 
   li {
     font-size: 16px;
@@ -527,6 +551,14 @@ textarea:focus {
 
 @media screen and (max-width: 1080px) {
 
+  .author-sign {
+    text-align: right;
+    margin-top: 2em;
+    font-size: 15px;
+    color: #43311f;
+    font-family: "Noto Serif", serif;
+  }
+
   .header-title {
     display: none;
   }
@@ -587,28 +619,15 @@ ul li {
   }
 
   .obi-title {
-    text-align: left;
     padding-left: 4%;
-    font-size: 24px;
+  font-size: 24px;
     color: #fff3e7;
     font-family: "Noto Serif JP", serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-  }
+      }
 
-  html {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-  }
-  .line {
-    border-bottom: solid #365c3b 0.5px;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 30px;
-  }
 
   .obi {
     position: fixed;
@@ -671,10 +690,11 @@ ul li {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #365c3b;
+    background-color: #fff3e7;
     z-index: 1000;
     transition: right 0.4s ease;
     overflow-y: auto;
+    
   }
 
   .hamburger-menu.active {
@@ -682,7 +702,7 @@ ul li {
   }
 
   .hamburger-menu ul {
-    margin-top: 50px;
+  
     padding: 4%;
     list-style: none;
     line-height: 1.5;
@@ -694,15 +714,11 @@ ul li {
       margin-bottom: 6%;
       font-size: 14px;
       color: #43311f;
-      background-color: #fff3e7;
-      border-radius: 8px;
-      border: solid 1px #fff3e7;
-      padding: 6% 4%;
       transition: color 0.2s ease-in-out;
     }
   
     .sidebar-menu li:hover {
-      color: #365c3b;
+      color: #43311f;
   }
 
   .hamburger-menu li a {
@@ -711,6 +727,56 @@ ul li {
     font-size: 18px;
     line-height: 1.5;
   }
+
+  #hamburger-menu {
+padding-top: 64px;
+
+  }
+
+  .menu-p-sp {
+  text-align: center;
+    font-size: 24px;
+    color:#43311f;
+    font-family: "Noto Serif JP", serif;
+font-optical-sizing: auto;
+font-weight: normal;
+font-style: normal;
+font-size: 32px;
+margin: auto;
+border-bottom: solid 1px #365c3b;
+padding-bottom: 8%;
+margin-top: 8%;
+margin-bottom: 8%;
+width: 6em;
+
+    }
+
+    .line {
+      width: 92%;
+      border-top: solid 1px rgba(67, 49, 31, 0.3);
+margin: auto;
+    }
+
+    .line_s {
+      width: 92%;
+      border-top: solid 1px rgba(67, 49, 31, 0.3);
+margin: auto;
+margin-bottom: 12%;
+    }
+
+    .sidebar-logo {
+      text-align: center;
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      
+    }
+
+
 
   /* ヘッダー画像 */
   .header-visual {

@@ -11,7 +11,9 @@
 
         <div id="content" class="site-content">
             <main id="primary" class="main-content fade-in">
-                <h1 class="komidashi fade-in"><?php single_cat_title(); ?></h1>
+                <h1 class="komidashi fade-in"><img
+                        src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
+                        class="icon-before-title"><?php single_cat_title(); ?></h1>
 
                 <?php
                 $args = array(

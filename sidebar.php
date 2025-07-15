@@ -9,14 +9,12 @@
 <aside id="secondary" class="site-sidebar">
     <div class="site-sidebar__inner">
 
-
         <div class="sidebar-logo">
             <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
                 <img class="logo"
-                    src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_green.png' ); ?>"
+                    src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_green_text.png' ); ?>"
                     alt="<?php bloginfo('name'); ?>">
             </a>
-            <p class="logo-p">Journaling Salon Sati</p>
         </div>
 
         <!-- グローバルナビゲーション -->
@@ -42,6 +40,11 @@
                 <li><a href="<?php echo esc_url( home_url('/category/information/') ); ?>">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
                             alt="icon" class="menu-icon">お知らせ・ブログ</a></li>
+
+                <li><a href="<?php echo esc_url( home_url('/chosho') ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"
+                            alt="icon" class="menu-icon">著書</a></li>
+
 
                 <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icon_sp.png' ); ?>"

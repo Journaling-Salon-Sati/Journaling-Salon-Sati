@@ -39,7 +39,7 @@
                         src="<?php echo esc_url(get_template_directory_uri() . '/images/icon_green.png'); ?>" alt="icon"
                         class="icon-before-title">提供サービスの概要</h2>
                 <p>
-                    ヴィパッサナー瞑想の修行者によるジャーナリング講座。<br />
+                    　ヴィパッサナー瞑想の修行者によるジャーナリング講座。<br />
                     書く瞑想を通じて思考を可視化し、自己理解を深めていく実践的講座を提供しています。
                 </p>
 

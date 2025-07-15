@@ -3,20 +3,6 @@
  * @package Journaling Salon Sati
  */
 
-/**
- * テーマのセットアップ
- */
-function sati_theme_setup() {
-    // 投稿にアイキャッチ画像（サムネイル）を設定できるようにする
-    add_theme_support('post-thumbnails');
-
-    // 一覧用のカードサムネイルサイズ
-    add_image_size('information-thumb', 300, 200, true);
-
-    // <title>タグをWordPress側に管理させる
-    add_theme_support('title-tag');
-}
-add_action('after_setup_theme', 'sati_theme_setup');
 
 /**
  * CSS／JS を読み込む
@@ -44,7 +30,24 @@ function sati_enqueue_assets() {
         true
     );
 }
-add_action('wp_enqueue_scripts', 'sati_enqueue_assets');
+add_action('wp_enqueue_scripts', 'sati_enqueue_assets', 1);
+
+
+
+/**
+ * テーマのセットアップ
+ */
+function sati_theme_setup() {
+    // 投稿にアイキャッチ画像（サムネイル）を設定できるようにする
+    add_theme_support('post-thumbnails');
+
+    // 一覧用のカードサムネイルサイズ
+    add_image_size('information-thumb', 300, 200, true);
+
+    // <title>タグをWordPress側に管理させる
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'sati_theme_setup');
 
 /**
  * 管理バーを非表示にする（ログイン中の上部バー）
